@@ -1,0 +1,2 @@
+model_checkpoint_path: "SpectralCF_RecommenderWrapper_best_model_last_session"
+all_model_checkpoint_paths: "SpectralCF_RecommenderWrapper_best_model_last_session"

@@ -1,0 +1,132 @@
+\begin{tabular}{ll|c}
+\toprule
+Algorithm & Hyperparameter &	 citeulike \\
+\midrule
+\multirow{5}{*}{UserKNN CF cosine} & topK &                    578 \\
+    & shrink &                      0 \\
+    & similarity &                 cosine \\
+    & normalize &                   True \\
+    & feature weighting &                   BM25 \\
+\midrule
+\multirow{4}{*}{UserKNN CF dice} & topK &                    627 \\
+    & shrink &                      0 \\
+    & similarity &                   dice \\
+    & normalize &                  False \\
+\midrule
+\multirow{4}{*}{UserKNN CF jaccard} & topK &                    637 \\
+    & shrink &                      0 \\
+    & similarity &                jaccard \\
+    & normalize &                  False \\
+\midrule
+\multirow{6}{*}{UserKNN CF asymmetric} & topK &                    690 \\
+    & shrink &                   1000 \\
+    & similarity &             asymmetric \\
+    & normalize &                   True \\
+    & asymmetric alpha &                 1.0291 \\
+    & feature weighting &                   BM25 \\
+\midrule
+\multirow{6}{*}{UserKNN CF tversky} & topK &                    533 \\
+    & shrink &                     35 \\
+    & similarity &                tversky \\
+    & normalize &                   True \\
+    & tversky alpha &                 1.4634 \\
+    & tversky beta &                 0.0885 \\
+\midrule
+\multirow{5}{*}{ItemKNN CF cosine} & topK &                    594 \\
+    & shrink &                    999 \\
+    & similarity &                 cosine \\
+    & normalize &                   True \\
+    & feature weighting &                 TF-IDF \\
+\midrule
+\multirow{4}{*}{ItemKNN CF dice} & topK &                    996 \\
+    & shrink &                     11 \\
+    & similarity &                   dice \\
+    & normalize &                  False \\
+\midrule
+\multirow{4}{*}{ItemKNN CF jaccard} & topK &                    480 \\
+    & shrink &                      3 \\
+    & similarity &                jaccard \\
+    & normalize &                   True \\
+\midrule
+\multirow{6}{*}{ItemKNN CF asymmetric} & topK &                   1000 \\
+    & shrink &                    649 \\
+    & similarity &             asymmetric \\
+    & normalize &                   True \\
+    & asymmetric alpha &                 0.2742 \\
+    & feature weighting &                 TF-IDF \\
+\midrule
+\multirow{6}{*}{ItemKNN CF tversky} & topK &                    421 \\
+    & shrink &                     28 \\
+    & similarity &                tversky \\
+    & normalize &                   True \\
+    & tversky alpha &                 0.0103 \\
+    & tversky beta &                 0.9612 \\
+\midrule
+\multirow{3}{*}{P3alpha} & topK &                    653 \\
+    & alpha &                 0.6310 \\
+    & normalize similarity &                  False \\
+\midrule
+\multirow{4}{*}{RP3beta} & topK &                    764 \\
+    & alpha &                 0.7110 \\
+    & beta &                 0.2297 \\
+    & normalize similarity &                   True \\
+\midrule
+EASE R  & l2 norm &               5.23E+02 \\
+\midrule
+\multirow{7}{*}{SLIM BPR} & topK &                    803 \\
+    & epochs &                    164 \\
+    & symmetric &                  False \\
+    & sgd mode &                   adam \\
+    & lambda i &               1.00E-02 \\
+    & lambda j &               1.00E-02 \\
+    & learning rate &               1.00E-04 \\
+\midrule
+\multirow{3}{*}{SLIM ElasticNet} & topK &                   1000 \\
+    & l1 ratio &               4.21E-05 \\
+    & alpha &                 0.0265 \\
+\midrule
+\multirow{7}{*}{MF BPR} & sgd mode &                   adam \\
+    & epochs &                   1044 \\
+    & num factors &                    175 \\
+    & batch size &                    512 \\
+    & positive reg &               9.89E-03 \\
+    & negative reg &               7.25E-03 \\
+    & learning rate &               2.80E-03 \\
+\midrule
+\multirow{9}{*}{MF FunkSVD} & sgd mode &                   adam \\
+    & epochs &                    299 \\
+    & use bias &                   True \\
+    & batch size &                     16 \\
+    & num factors &                     55 \\
+    & item reg &               4.02E-05 \\
+    & user reg &               1.00E-02 \\
+    & learning rate &               2.44E-03 \\
+    & negative interactions quota &                 0.2792 \\
+\midrule
+PureSVD & num factors &                    320 \\
+\midrule
+\multirow{4}{*}{NMF} & num factors &                    122 \\
+    & solver &  multiplicative update \\
+    & init type &                nndsvda \\
+    & beta loss &       kullback-leibler \\
+\midrule
+\multirow{6}{*}{IALS} & num factors &                    115 \\
+    & epochs &                     59 \\
+    & confidence scaling &                 linear \\
+    & alpha &                15.4014 \\
+    & epsilon &                 0.4163 \\
+    & reg &               1.00E-05 \\
+\midrule
+\multirow{11}{*}{CMN} & epochs gmf &                     95 \\
+    & hops &                      3 \\
+    & neg samples &                      4 \\
+    & reg l2 cmn &               1.00E-01 \\
+    & reg l2 gmf &               1.00E-04 \\
+    & pretrain &                   True \\
+    & learning rate &               1.00E-03 \\
+    & verbose &                  False \\
+    & epochs &                     30 \\
+    & batch size &                    128 \\
+    & embed size &                     50 \\
+\bottomrule
+\end{tabular}

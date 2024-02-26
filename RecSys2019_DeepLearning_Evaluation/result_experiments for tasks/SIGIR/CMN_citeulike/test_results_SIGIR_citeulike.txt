@@ -1,0 +1,13 @@
+\begin{tabular}{llllllll}
+\toprule
+{} & TopPop & UserKNNCF & ItemKNNCF & P3alpha & RP3beta & SLIMElasticNet &    CMN \\
+\midrule
+TopPop         &      1 &     0.206 &     0.189 &   0.204 &   0.195 &          0.208 &  0.176 \\
+UserKNNCF      &  0.206 &         1 &     0.711 &   0.762 &   0.807 &          0.766 &  0.434 \\
+ItemKNNCF      &  0.189 &     0.711 &         1 &   0.725 &    0.74 &          0.707 &  0.433 \\
+P3alpha        &  0.204 &     0.762 &     0.725 &       1 &   0.856 &          0.722 &  0.421 \\
+RP3beta        &  0.195 &     0.807 &      0.74 &   0.856 &       1 &          0.751 &  0.429 \\
+SLIMElasticNet &  0.208 &     0.766 &     0.707 &   0.722 &   0.751 &              1 &  0.408 \\
+CMN            &  0.176 &     0.434 &     0.433 &   0.421 &   0.429 &          0.408 &      1 \\
+\bottomrule
+\end{tabular}

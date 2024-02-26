@@ -1,0 +1,129 @@
+\begin{tabular}{ll|cccc}
+\toprule
+Algorithm & Hyperparameter &	 movielens1m ours &	 movielens1m original &	 hetrec &	 amazon instant video \\
+\midrule
+\multirow{5}{*}{UserKNN CF cosine} & topK &                 418 &                    365 &                    464 &                    800 \\
+                           & shrink &                 402 &                      0 &                      0 &                    364 \\
+                           & similarity &              cosine &                 cosine &                 cosine &                 cosine \\
+                           & normalize &                True &                   True &                   True &                  False \\
+                           & feature weighting &              TF-IDF &                 TF-IDF &                   none &                 TF-IDF \\
+\midrule
+\multirow{4}{*}{UserKNN CF dice} & topK &                 383 &                    276 &                    428 &                    484 \\
+                           & shrink &                   0 &                      1 &                      1 &                    940 \\
+                           & similarity &                dice &                   dice &                   dice &                   dice \\
+                           & normalize &               False &                   True &                   True &                  False \\
+\midrule
+\multirow{4}{*}{UserKNN CF jaccard} & topK &                 300 &                    337 &                    456 &                    444 \\
+                           & shrink &                   0 &                      0 &                      0 &                    303 \\
+                           & similarity &             jaccard &                jaccard &                jaccard &                jaccard \\
+                           & normalize &               False &                   True &                  False &                   True \\
+\midrule
+\multirow{6}{*}{UserKNN CF asymmetric} & topK &                 734 &                    369 &                    441 &                    855 \\
+                           & shrink &                   0 &                    134 &                      0 &                     19 \\
+                           & similarity &          asymmetric &             asymmetric &             asymmetric &             asymmetric \\
+                           & normalize &                True &                   True &                   True &                   True \\
+                           & asymmetric alpha &              0.4193 &                 0.6047 &                 0.5026 &                 0.7882 \\
+                           & feature weighting &              TF-IDF &                 TF-IDF &                 TF-IDF &                   none \\
+\midrule
+\multirow{6}{*}{UserKNN CF tversky} & topK &                 516 &                    377 &                    449 &                    476 \\
+                           & shrink &                   0 &                      0 &                      0 &                    806 \\
+                           & similarity &             tversky &                tversky &                tversky &                tversky \\
+                           & normalize &                True &                   True &                   True &                   True \\
+                           & tversky alpha &              1.2079 &                 2.0000 &                 2.0000 &                 1.3499 \\
+                           & tversky beta &              2.0000 &                 2.0000 &                 2.0000 &                 1.7078 \\
+\midrule
+\multirow{5}{*}{ItemKNN CF cosine} & topK &                 197 &                    615 &                    322 &                    998 \\
+                           & shrink &                   0 &                      0 &                   1000 &                     21 \\
+                           & similarity &              cosine &                 cosine &                 cosine &                 cosine \\
+                           & normalize &                True &                   True &                   True &                  False \\
+                           & feature weighting &              TF-IDF &                 TF-IDF &                 TF-IDF &                 TF-IDF \\
+\midrule
+\multirow{4}{*}{ItemKNN CF dice} & topK &                 218 &                    137 &                    195 &                    443 \\
+                           & shrink &                   2 &                      0 &                     33 &                    172 \\
+                           & similarity &                dice &                   dice &                   dice &                   dice \\
+                           & normalize &                True &                  False &                  False &                  False \\
+\midrule
+\multirow{4}{*}{ItemKNN CF jaccard} & topK &                 158 &                    135 &                    222 &                    290 \\
+                           & shrink &                   1 &                      0 &                      5 &                    140 \\
+                           & similarity &             jaccard &                jaccard &                jaccard &                jaccard \\
+                           & normalize &                True &                  False &                   True &                   True \\
+\midrule
+\multirow{6}{*}{ItemKNN CF asymmetric} & topK &                 269 &                   1000 &                    462 &                   1000 \\
+                           & shrink &                   0 &                      0 &                    222 &                   1000 \\
+                           & similarity &          asymmetric &             asymmetric &             asymmetric &             asymmetric \\
+                           & normalize &                True &                   True &                   True &                   True \\
+                           & asymmetric alpha &              0.3993 &                 0.0466 &                 0.0000 &                 0.0000 \\
+                           & feature weighting &              TF-IDF &                 TF-IDF &                 TF-IDF &                 TF-IDF \\
+\midrule
+\multirow{6}{*}{ItemKNN CF tversky} & topK &                  48 &                    143 &                    142 &                   1000 \\
+                           & shrink &                  77 &                      0 &                     23 &                   1000 \\
+                           & similarity &             tversky &                tversky &                tversky &                tversky \\
+                           & normalize &                True &                   True &                   True &                   True \\
+                           & tversky alpha &              0.8429 &                 0.4521 &                 0.2786 &                 0.0000 \\
+                           & tversky beta &              1.7696 &                 2.0000 &                 1.3237 &                 2.0000 \\
+\midrule
+\multirow{3}{*}{P3alpha} & topK &                 350 &                    332 &                    901 &                   1000 \\
+                           & alpha &              0.6537 &                 1.0075 &                 0.7565 &                 0.3705 \\
+                           & normalize similarity &                True &                   True &                  False &                  False \\
+\midrule
+\multirow{4}{*}{RP3beta} & topK &                 853 &                    537 &                   1000 &                    442 \\
+                           & alpha &              0.0000 &                 0.7551 &                 0.8163 &                 0.6540 \\
+                           & beta &              0.4098 &                 0.5412 &                 0.2099 &                 0.0332 \\
+                           & normalize similarity &                True &                  False &                  False &                  False \\
+\midrule
+EASE R  & l2 norm &            7.50E+02 &               2.92E+02 &               5.20E+02 &               1.02E+06 \\
+\midrule
+\multirow{7}{*}{SLIM BPR} & topK &                 329 &                   1000 &                    725 &                   1000 \\
+                           & epochs &                 129 &                    199 &                     79 &                    149 \\
+                           & symmetric &                True &                   True &                   True &                  False \\
+                           & sgd mode &                 sgd &                adagrad &                adagrad &                adagrad \\
+                           & lambda i &            1.00E-02 &               1.00E-05 &               1.00E-05 &               1.00E-02 \\
+                           & lambda j &            1.00E-02 &               1.00E-05 &               1.00E-05 &               1.00E-02 \\
+                           & learning rate &            1.33E-02 &               1.00E-01 &               3.19E-04 &               1.00E-04 \\
+\midrule
+\multirow{3}{*}{SLIM ElasticNet} & topK &                 642 &                    747 &                    602 &                    862 \\
+                           & l1 ratio &            1.89E-05 &               7.37E-05 &               1.58E-05 &               6.11E-05 \\
+                           & alpha &              0.0490 &                 0.0371 &                 0.1354 &                 0.5507 \\
+\midrule
+\multirow{7}{*}{MF BPR} & sgd mode &             adagrad &                adagrad &                adagrad &                adagrad \\
+                           & epochs &                 789 &                    444 &                    189 &                    499 \\
+                           & num factors &                 200 &                    200 &                    200 &                    200 \\
+                           & batch size &                 512 &                     32 &                     64 &                      1 \\
+                           & positive reg &            1.00E-02 &               1.00E-02 &               1.00E-02 &               1.00E-02 \\
+                           & negative reg &            1.00E-05 &               1.00E-02 &               1.00E-02 &               1.00E-02 \\
+                           & learning rate &            2.86E-02 &               1.00E-01 &               2.22E-02 &               1.00E-01 \\
+\midrule
+\multirow{9}{*}{MF FunkSVD} & sgd mode &                adam &                   adam &                   adam &                   adam \\
+                           & epochs &                 324 &                    279 &                     69 &                    369 \\
+                           & use bias &                True &                  False &                   True &                  False \\
+                           & batch size &                  32 &                      2 &                      8 &                      2 \\
+                           & num factors &                  19 &                      8 &                     98 &                     13 \\
+                           & item reg &            1.47E-04 &               1.28E-05 &               2.19E-05 &               6.87E-05 \\
+                           & user reg &            1.88E-04 &               6.74E-04 &               6.92E-03 &               3.09E-04 \\
+                           & learning rate &            2.45E-03 &               1.54E-03 &               4.73E-03 &               1.15E-02 \\
+                           & negative interactions quota &              0.2131 &                 0.1045 &                 0.4633 &                 0.1323 \\
+\midrule
+PureSVD & num factors &                  16 &                     15 &                      9 &                     33 \\
+\midrule
+\multirow{4}{*}{NMF} & num factors &                   9 &                     20 &                     22 &                     37 \\
+                           & solver &  coordinate descent &  multiplicative update &  multiplicative update &  multiplicative update \\
+                           & init type &              random &                nndsvda &                 random &                nndsvda \\
+                           & beta loss &           frobenius &       kullback-leibler &              frobenius &              frobenius \\
+\midrule
+\multirow{6}{*}{IALS} & num factors &                  24 &                     22 &                     11 &                     26 \\
+                           & epochs &                  19 &                     74 &                     44 &                     49 \\
+                           & confidence scaling &                 log &                    log &                 linear &                 linear \\
+                           & alpha &             50.0000 &                 1.7077 &                 6.0056 &                50.0000 \\
+                           & epsilon &             10.0000 &                 0.0010 &                 0.0010 &                 0.0010 \\
+                           & reg &            1.20E-04 &               1.00E-05 &               1.31E-03 &               1.00E-05 \\
+\midrule
+\multirow{6}{*}{SpectralCF} & batch size &                2048 &                      - &                      - &                   1024 \\
+                           & embedding size &                   4 &                      - &                      - &                      8 \\
+                           & decay &            3.06E-02 &                      - &                      - &               2.78E-04 \\
+                           & learning rate &            8.83E-04 &                      - &                      - &               9.68E-03 \\
+                           & k &                   2 &                      - &                      - &                      3 \\
+                           & epochs &                 735 &                      - &                      - &                    245 \\
+\midrule
+SpectralCF article default & - &                   - &                      - &                      - &                      - \\
+\bottomrule
+\end{tabular}

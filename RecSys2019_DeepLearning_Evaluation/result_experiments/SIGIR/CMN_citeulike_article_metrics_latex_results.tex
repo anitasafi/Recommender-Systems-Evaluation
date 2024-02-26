@@ -1,0 +1,49 @@
+\documentclass{article}
+\usepackage{booktabs}   % For better table formatting
+\usepackage{graphicx}   % For resizing boxes (like tables)
+
+\begin{document}
+
+\begin{table}[htbp]
+\centering
+% Resize the table to fit the width of the page
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{l|cccc|cccc|}
+\toprule
+{} & \multicolumn{4}{c}{@ 5} & \multicolumn{4}{c}{@ 10} \vline\\
+{} &               HR &             NDCG &            UNEXP &           SEREND &               HR &             NDCG &            UNEXP &           SEREND \\
+\midrule
+Random                &           0.0504 &           0.0300 &           0.0101 &           0.0101 &           0.1007 &           0.0460 &           0.0101 &           0.0101 \\
+TopPop                &           0.1810 &           0.1226 &           0.0362 &           0.0362 &           0.2774 &           0.1537 &           0.0277 &           0.0277 \\
+\midrule
+UserKNN CF cosine     &  \textbf{0.8337} &  \textbf{0.7146} &  \textbf{0.1667} &  \textbf{0.1667} &  \textbf{0.8984} &  \textbf{0.7357} &  \textbf{0.0898} &  \textbf{0.0898} \\
+UserKNN CF dice       &           0.8099 &  \textbf{0.6839} &           0.1620 &           0.1620 &           0.8836 &  \textbf{0.7079} &           0.0884 &           0.0884 \\
+UserKNN CF jaccard    &  \textbf{0.8116} &  \textbf{0.6880} &  \textbf{0.1623} &  \textbf{0.1623} &           0.8838 &  \textbf{0.7115} &           0.0884 &           0.0884 \\
+UserKNN CF asymmetric &  \textbf{0.8328} &  \textbf{0.7145} &  \textbf{0.1666} &  \textbf{0.1666} &  \textbf{0.8995} &  \textbf{0.7362} &  \textbf{0.0899} &  \textbf{0.0899} \\
+UserKNN CF tversky    &  \textbf{0.8121} &  \textbf{0.6892} &  \textbf{0.1624} &  \textbf{0.1624} &  \textbf{0.8867} &  \textbf{0.7135} &  \textbf{0.0887} &  \textbf{0.0887} \\
+ItemKNN CF cosine     &  \textbf{0.8247} &  \textbf{0.7045} &  \textbf{0.1649} &  \textbf{0.1649} &  \textbf{0.8925} &  \textbf{0.7267} &  \textbf{0.0892} &  \textbf{0.0892} \\
+ItemKNN CF dice       &           0.8089 &  \textbf{0.6823} &           0.1618 &           0.1618 &  \textbf{0.8863} &  \textbf{0.7075} &  \textbf{0.0886} &  \textbf{0.0886} \\
+ItemKNN CF jaccard    &           0.8065 &  \textbf{0.6793} &           0.1613 &           0.1613 &  \textbf{0.8861} &  \textbf{0.7053} &  \textbf{0.0886} &  \textbf{0.0886} \\
+ItemKNN CF asymmetric &  \textbf{0.8233} &  \textbf{0.7042} &  \textbf{0.1647} &  \textbf{0.1647} &  \textbf{0.8944} &  \textbf{0.7274} &  \textbf{0.0894} &  \textbf{0.0894} \\
+ItemKNN CF tversky    &           0.8081 &  \textbf{0.6796} &           0.1616 &           0.1616 &  \textbf{0.8874} &  \textbf{0.7055} &  \textbf{0.0887} &  \textbf{0.0887} \\
+P3alpha               &  \textbf{0.8272} &  \textbf{0.7144} &  \textbf{0.1654} &  \textbf{0.1654} &  \textbf{0.8971} &  \textbf{0.7370} &  \textbf{0.0897} &  \textbf{0.0897} \\
+RP3beta               &  \textbf{0.8326} &  \textbf{0.7227} &  \textbf{0.1665} &  \textbf{0.1665} &  \textbf{0.9002} &  \textbf{0.7447} &  \textbf{0.0900} &  \textbf{0.0900} \\
+\midrule
+EASE R                &  \textbf{0.8116} &  \textbf{0.6973} &  \textbf{0.1623} &  \textbf{0.1623} &           0.8806 &  \textbf{0.7197} &           0.0881 &           0.0881 \\
+SLIM BPR              &           0.8099 &  \textbf{0.6928} &           0.1620 &           0.1620 &           0.8813 &  \textbf{0.7159} &           0.0881 &           0.0881 \\
+SLIM ElasticNet       &  \textbf{0.8265} &  \textbf{0.7168} &  \textbf{0.1653} &  \textbf{0.1653} &  \textbf{0.8910} &  \textbf{0.7376} &  \textbf{0.0891} &  \textbf{0.0891} \\
+MF BPR                &           0.7354 &           0.6128 &           0.1471 &           0.1471 &           0.8238 &           0.6415 &           0.0824 &           0.0824 \\
+MF FunkSVD            &           0.7945 &           0.6556 &           0.1589 &           0.1589 &           0.8662 &           0.6791 &           0.0866 &           0.0866 \\
+PureSVD               &           0.7244 &           0.6032 &           0.1449 &           0.1449 &           0.7984 &           0.6273 &           0.0798 &           0.0798 \\
+NMF                   &           0.7109 &           0.5497 &           0.1422 &           0.1422 &           0.8206 &           0.5854 &           0.0821 &           0.0821 \\
+IALS                  &  \textbf{0.8323} &  \textbf{0.7090} &  \textbf{0.1665} &  \textbf{0.1665} &  \textbf{0.8993} &  \textbf{0.7310} &  \textbf{0.0899} &  \textbf{0.0899} \\
+\midrule
+CMN                   &           0.8114 &           0.6717 &           0.1623 &           0.1623 &           0.8858 &           0.6961 &           0.0886 &           0.0886 \\
+\bottomrule
+\end{tabular}
+}
+
+\label{tab:my_label}
+\end{table}
+
+\end{document}

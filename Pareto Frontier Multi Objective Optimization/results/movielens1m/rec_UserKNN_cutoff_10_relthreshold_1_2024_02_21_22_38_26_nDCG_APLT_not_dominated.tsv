@@ -1,0 +1,16 @@
+model	nDCG	APLT
+UserKNN_nn=8_sim=cosine_imp=standard_bin=False_shrink=0_norm=True_asymalpha=_tvalpha=_tvbeta=_rweights=	0.0492695386114741	0.2136754966887417
+UserKNN_nn=955_sim=cosine_imp=standard_bin=False_shrink=0_norm=True_asymalpha=_tvalpha=_tvbeta=_rweights=	0.0900978378994282	0.0008443708609271
+UserKNN_nn=882_sim=cosine_imp=standard_bin=False_shrink=0_norm=True_asymalpha=_tvalpha=_tvbeta=_rweights=	0.0894532803098693	0.0010596026490066
+UserKNN_nn=838_sim=cosine_imp=standard_bin=False_shrink=0_norm=True_asymalpha=_tvalpha=_tvbeta=_rweights=	0.0889192302696838	0.0012251655629139
+UserKNN_nn=693_sim=cosine_imp=standard_bin=False_shrink=0_norm=True_asymalpha=_tvalpha=_tvbeta=_rweights=	0.0880732622845782	0.0014072847682119
+UserKNN_nn=735_sim=cosine_imp=standard_bin=False_shrink=0_norm=True_asymalpha=_tvalpha=_tvbeta=_rweights=	0.0882003666931331	0.001274834437086
+UserKNN_nn=638_sim=cosine_imp=standard_bin=False_shrink=0_norm=True_asymalpha=_tvalpha=_tvbeta=_rweights=	0.0872050043521762	0.001705298013245
+UserKNN_nn=618_sim=cosine_imp=standard_bin=False_shrink=0_norm=True_asymalpha=_tvalpha=_tvbeta=_rweights=	0.0867989469392244	0.0017384105960264
+UserKNN_nn=585_sim=cosine_imp=standard_bin=False_shrink=0_norm=True_asymalpha=_tvalpha=_tvbeta=_rweights=	0.0859587871816594	0.0020033112582781
+UserKNN_nn=545_sim=cosine_imp=standard_bin=False_shrink=0_norm=True_asymalpha=_tvalpha=_tvbeta=_rweights=	0.0855818944845312	0.0021854304635761
+UserKNN_nn=291_sim=cosine_imp=standard_bin=False_shrink=0_norm=True_asymalpha=_tvalpha=_tvbeta=_rweights=	0.0821012401805266	0.0056125827814569
+UserKNN_nn=518_sim=cosine_imp=standard_bin=False_shrink=0_norm=True_asymalpha=_tvalpha=_tvbeta=_rweights=	0.0851739024202974	0.0024006622516556
+UserKNN_nn=400_sim=cosine_imp=standard_bin=False_shrink=0_norm=True_asymalpha=_tvalpha=_tvbeta=_rweights=	0.0840603496552369	0.003228476821192
+UserKNN_nn=447_sim=cosine_imp=standard_bin=False_shrink=0_norm=True_asymalpha=_tvalpha=_tvbeta=_rweights=	0.0843412258106461	0.0028311258278145
+UserKNN_nn=457_sim=cosine_imp=standard_bin=False_shrink=0_norm=True_asymalpha=_tvalpha=_tvbeta=_rweights=	0.0843805968512834	0.0027649006622516

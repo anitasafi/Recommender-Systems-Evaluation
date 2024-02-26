@@ -1,0 +1,65 @@
+\begin{tabular}{ll|cccc}
+\toprule
+Algorithm & Hyperparameter &	 movielens1m ours &	 movielens1m original &	 hetrec &	 amazon instant video \\
+\midrule
+\multirow{5}{*}{UserKNN CF cosine} & topK &              418 &                  365 &         464 &                  800 \\
+                   & shrink &              402 &                    0 &           0 &                  364 \\
+                   & similarity &           cosine &               cosine &      cosine &               cosine \\
+                   & normalize &             True &                 True &        True &                False \\
+                   & feature weighting &           TF-IDF &               TF-IDF &        none &               TF-IDF \\
+\midrule
+\multirow{4}{*}{UserKNN CF dice} & topK &              383 &                  276 &         428 &                  484 \\
+                   & shrink &                0 &                    1 &           1 &                  940 \\
+                   & similarity &             dice &                 dice &        dice &                 dice \\
+                   & normalize &            False &                 True &        True &                False \\
+\midrule
+\multirow{4}{*}{UserKNN CF jaccard} & topK &              300 &                  337 &         456 &                  444 \\
+                   & shrink &                0 &                    0 &           0 &                  303 \\
+                   & similarity &          jaccard &              jaccard &     jaccard &              jaccard \\
+                   & normalize &            False &                 True &       False &                 True \\
+\midrule
+\multirow{6}{*}{UserKNN CF asymmetric} & topK &              734 &                  369 &         441 &                  855 \\
+                   & shrink &                0 &                  134 &           0 &                   19 \\
+                   & similarity &       asymmetric &           asymmetric &  asymmetric &           asymmetric \\
+                   & normalize &             True &                 True &        True &                 True \\
+                   & asymmetric alpha &           0.4193 &               0.6047 &      0.5026 &               0.7882 \\
+                   & feature weighting &           TF-IDF &               TF-IDF &      TF-IDF &                 none \\
+\midrule
+\multirow{6}{*}{UserKNN CF tversky} & topK &              516 &                  377 &         449 &                  476 \\
+                   & shrink &                0 &                    0 &           0 &                  806 \\
+                   & similarity &          tversky &              tversky &     tversky &              tversky \\
+                   & normalize &             True &                 True &        True &                 True \\
+                   & tversky alpha &           1.2079 &               2.0000 &      2.0000 &               1.3499 \\
+                   & tversky beta &           2.0000 &               2.0000 &      2.0000 &               1.7078 \\
+\midrule
+\multirow{5}{*}{ItemKNN CF cosine} & topK &              197 &                  615 &         322 &                  998 \\
+                   & shrink &                0 &                    0 &        1000 &                   21 \\
+                   & similarity &           cosine &               cosine &      cosine &               cosine \\
+                   & normalize &             True &                 True &        True &                False \\
+                   & feature weighting &           TF-IDF &               TF-IDF &      TF-IDF &               TF-IDF \\
+\midrule
+\multirow{4}{*}{ItemKNN CF dice} & topK &              218 &                  137 &         195 &                  443 \\
+                   & shrink &                2 &                    0 &          33 &                  172 \\
+                   & similarity &             dice &                 dice &        dice &                 dice \\
+                   & normalize &             True &                False &       False &                False \\
+\midrule
+\multirow{4}{*}{ItemKNN CF jaccard} & topK &              158 &                  135 &         222 &                  290 \\
+                   & shrink &                1 &                    0 &           5 &                  140 \\
+                   & similarity &          jaccard &              jaccard &     jaccard &              jaccard \\
+                   & normalize &             True &                False &        True &                 True \\
+\midrule
+\multirow{6}{*}{ItemKNN CF asymmetric} & topK &              269 &                 1000 &         462 &                 1000 \\
+                   & shrink &                0 &                    0 &         222 &                 1000 \\
+                   & similarity &       asymmetric &           asymmetric &  asymmetric &           asymmetric \\
+                   & normalize &             True &                 True &        True &                 True \\
+                   & asymmetric alpha &           0.3993 &               0.0466 &      0.0000 &               0.0000 \\
+                   & feature weighting &           TF-IDF &               TF-IDF &      TF-IDF &               TF-IDF \\
+\midrule
+\multirow{6}{*}{ItemKNN CF tversky} & topK &               48 &                  143 &         142 &                 1000 \\
+                   & shrink &               77 &                    0 &          23 &                 1000 \\
+                   & similarity &          tversky &              tversky &     tversky &              tversky \\
+                   & normalize &             True &                 True &        True &                 True \\
+                   & tversky alpha &           0.8429 &               0.4521 &      0.2786 &               0.0000 \\
+                   & tversky beta &           1.7696 &               2.0000 &      1.3237 &               2.0000 \\
+\bottomrule
+\end{tabular}

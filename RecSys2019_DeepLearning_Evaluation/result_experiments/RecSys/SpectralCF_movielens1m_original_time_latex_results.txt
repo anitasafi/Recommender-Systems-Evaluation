@@ -1,0 +1,33 @@
+\begin{tabular}{l|rrr|}
+\toprule
+{} &                 Train Time & \begin{tabular}{@{}c@{}}Recommendation\\Time\end{tabular} & \begin{tabular}{@{}c@{}}Recommendation\\Throughput\end{tabular} \\
+\midrule
+Random                     &                0.01 [sec]  &                                       35.40 [sec]  &                                                155 \\
+TopPop                     &                0.01 [sec]  &                                       37.36 [sec]  &                                                147 \\
+\midrule
+UserKNN CF cosine          &                1.00 [sec]  &                                       36.68 [sec]  &                                                149 \\
+UserKNN CF dice            &                0.91 [sec]  &                                       36.66 [sec]  &                                                149 \\
+UserKNN CF jaccard         &                1.14 [sec]  &                                       36.67 [sec]  &                                                149 \\
+UserKNN CF asymmetric      &                0.98 [sec]  &                                       36.75 [sec]  &                                                149 \\
+UserKNN CF tversky         &                0.99 [sec]  &                                       37.82 [sec]  &                                                145 \\
+ItemKNN CF cosine          &                0.62 [sec]  &                                       36.77 [sec]  &                                                149 \\
+ItemKNN CF dice            &                0.36 [sec]  &                                       36.36 [sec]  &                                                151 \\
+ItemKNN CF jaccard         &                0.31 [sec]  &                                       36.34 [sec]  &                                                151 \\
+ItemKNN CF asymmetric      &                0.49 [sec]  &                                       37.35 [sec]  &                                                147 \\
+ItemKNN CF tversky         &                0.48 [sec]  &                                       36.46 [sec]  &                                                150 \\
+P3alpha                    &                1.73 [sec]  &                                       36.44 [sec]  &                                                150 \\
+RP3beta                    &                2.59 [sec]  &                                       37.78 [sec]  &                                                145 \\
+\midrule
+EASE R                     &                9.77 [sec]  &                                       36.66 [sec]  &                                                149 \\
+SLIM BPR                   &               26.34 [sec]  &                                       37.54 [sec]  &                                                146 \\
+SLIM ElasticNet            &               44.42 [sec]  &                                       37.86 [sec]  &                                                145 \\
+MF BPR                     &  93.87 [sec] / 1.56 [min]  &                                       37.51 [sec]  &                                                146 \\
+MF FunkSVD                 &  65.02 [sec] / 1.08 [min]  &                                       37.26 [sec]  &                                                147 \\
+PureSVD                    &                0.12 [sec]  &                                       36.45 [sec]  &                                                150 \\
+NMF                        &               37.67 [sec]  &                                       36.54 [sec]  &                                                150 \\
+IALS                       &               40.80 [sec]  &                                       36.72 [sec]  &                                                149 \\
+\midrule
+SpectralCF                 &                          - &                                                  - &                                                  - \\
+SpectralCF article default &                          - &                                                  - &                                                  - \\
+\bottomrule
+\end{tabular}

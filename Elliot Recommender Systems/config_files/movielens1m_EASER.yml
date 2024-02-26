@@ -1,0 +1,43 @@
+experiment:
+  version: 0.3.1
+  dataset: cat_dbpedia_movielens_1m
+  data_config:
+    strategy: dataset
+    dataset_path: ../data/movielens_1m/dataset.tsv
+    side_information:
+      - dataloader: ChainedKG
+        map: ../data/cat_dbpedia_movielens_1m/map.tsv
+        features: ../data/cat_dbpedia_movielens_1m/features.tsv
+        properties: ../data/cat_dbpedia_movielens_1m/properties.conf
+#  prefiltering:
+#    strategy: user_average # Not applied in the paper experiments
+  splitting:
+    save_on_disk: True
+    save_folder: ../data/cat_dbpedia_movielens_1m/splitting/
+    test_splitting:
+        strategy: temporal_hold_out
+        test_ratio: 0.2
+    validation_splitting:
+        strategy: temporal_hold_out
+        test_ratio: 0.2
+  top_k: 10
+  evaluation:
+    cutoffs: 10
+    simple_metrics: [nDCG, Recall, Precision, Gini, ItemCoverage, EPC, EFD, APLT, ARP]
+    relevance_threshold: 1
+    paired_ttest: True
+    wilcoxon_test: True
+  gpu: 1
+  external_models_path: ../external/models/__init__.py
+  models:
+    ####
+    EASER:
+      meta:
+        hyper_max_evals: 20
+        hyper_opt_alg: tpe
+        verbose: True
+        save_recs: True
+      neighborhood: [uniform, 5, 1000]
+      alpha: [uniform, 0, 2]
+      beta: [uniform, 0, 2]
+      normalize_similarity: [True, False] 

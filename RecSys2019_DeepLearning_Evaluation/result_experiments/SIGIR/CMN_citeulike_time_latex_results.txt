@@ -1,0 +1,32 @@
+\begin{tabular}{l|rrr|}
+\toprule
+{} &                     Train Time & \begin{tabular}{@{}c@{}}Recommendation\\Time\end{tabular} & \begin{tabular}{@{}c@{}}Recommendation\\Throughput\end{tabular} \\
+\midrule
+Random                &                    0.01 [sec]  &                                       16.24 [sec]  &                                                342 \\
+TopPop                &                    0.01 [sec]  &                                       13.83 [sec]  &                                                401 \\
+\midrule
+UserKNN CF cosine     &                    0.59 [sec]  &                                       17.56 [sec]  &                                                316 \\
+UserKNN CF dice       &                    0.57 [sec]  &                                       17.78 [sec]  &                                                312 \\
+UserKNN CF jaccard    &                    0.58 [sec]  &                                       17.70 [sec]  &                                                314 \\
+UserKNN CF asymmetric &                    0.55 [sec]  &                                       21.92 [sec]  &                                                253 \\
+UserKNN CF tversky    &                    0.72 [sec]  &                                       17.59 [sec]  &                                                315 \\
+ItemKNN CF cosine     &                    2.56 [sec]  &                                       17.39 [sec]  &                                                319 \\
+ItemKNN CF dice       &                    2.70 [sec]  &                                       17.49 [sec]  &                                                317 \\
+ItemKNN CF jaccard    &                    2.31 [sec]  &                                       17.38 [sec]  &                                                319 \\
+ItemKNN CF asymmetric &                    3.58 [sec]  &                                       26.06 [sec]  &                                                213 \\
+ItemKNN CF tversky    &                    2.47 [sec]  &                                       17.11 [sec]  &                                                324 \\
+P3alpha               &                   17.58 [sec]  &                                       17.13 [sec]  &                                                324 \\
+RP3beta               &                   19.49 [sec]  &                                       17.11 [sec]  &                                                324 \\
+\midrule
+EASE R                &    869.38 [sec] / 14.49 [min]  &                                       18.18 [sec]  &                                                305 \\
+SLIM BPR              &                   58.99 [sec]  &                                       17.68 [sec]  &                                                314 \\
+SLIM ElasticNet       &     246.72 [sec] / 4.11 [min]  &                                       17.78 [sec]  &                                                312 \\
+MF BPR                &     219.77 [sec] / 3.66 [min]  &                                       13.94 [sec]  &                                                398 \\
+MF FunkSVD            &     380.36 [sec] / 6.34 [min]  &                                       14.53 [sec]  &                                                382 \\
+PureSVD               &                    3.83 [sec]  &                                       17.18 [sec]  &                                                323 \\
+NMF                   &     166.43 [sec] / 2.77 [min]  &                                       22.57 [sec]  &                                                246 \\
+IALS                  &     573.42 [sec] / 9.56 [min]  &                                       14.10 [sec]  &                                                394 \\
+\midrule
+CMN                   &  118224.24 [sec] / 0.22 [day]  &                          67.61 [sec] / 1.13 [min]  &                                                 82 \\
+\bottomrule
+\end{tabular}

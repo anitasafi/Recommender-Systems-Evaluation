@@ -1,0 +1,147 @@
+SearchSingleCase: Resuming 'SpectralCF_RecommenderWrapper_article_default' Failed, no such file exists.SearchSingleCase: Config 0 Exception. Config: {'batch_size': 1024, 'embedding_size': 16, 'decay': 0.001, 'k': 3, 'learning_rate': 0.001, 'epochs': 425} - Exception: Traceback (most recent call last):
+  File "/home/andrii/miniforge3/envs/DLevaluation/lib/python3.6/site-packages/tensorflow/python/client/session.py", line 1334, in _do_call
+    return fn(*args)
+  File "/home/andrii/miniforge3/envs/DLevaluation/lib/python3.6/site-packages/tensorflow/python/client/session.py", line 1319, in _run_fn
+    options, feed_dict, fetch_list, target_list, run_metadata)
+  File "/home/andrii/miniforge3/envs/DLevaluation/lib/python3.6/site-packages/tensorflow/python/client/session.py", line 1407, in _call_tf_sessionrun
+    run_metadata)
+tensorflow.python.framework.errors_impl.ResourceExhaustedError: OOM when allocating tensor of shape [8973,8973] and type float
+	 [[{{node MatMul_4/a}} = Const[dtype=DT_FLOAT, value=Tensor<type: float shape: [8973,8973] values: [1.16213298 0.000446597143 -0.000197508984...]...>, _device="/job:localhost/replica:0/task:0/device:GPU:0"]()]]
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/andrii/dev/RecSys2019_DeepLearning_Evaluation/ParameterTuning/SearchAbstractClass.py", line 372, in _objective_function
+    result_dict, result_string, recommender_instance, train_time, evaluation_time = self._evaluate_on_validation(current_fit_parameters_dict)
+  File "/home/andrii/dev/RecSys2019_DeepLearning_Evaluation/ParameterTuning/SearchSingleCase.py", line 60, in _evaluate_on_validation
+    return super(SearchSingleCase, self)._evaluate_on_validation(current_fit_parameters)
+  File "/home/andrii/dev/RecSys2019_DeepLearning_Evaluation/ParameterTuning/SearchAbstractClass.py", line 273, in _evaluate_on_validation
+    recommender_instance, train_time = self._fit_model(current_fit_parameters)
+  File "/home/andrii/dev/RecSys2019_DeepLearning_Evaluation/ParameterTuning/SearchAbstractClass.py", line 263, in _fit_model
+    **current_fit_parameters)
+  File "/home/andrii/dev/RecSys2019_DeepLearning_Evaluation/Conferences/RecSys/SpectralCF_our_interface/SpectralCF_RecommenderWrapper.py", line 207, in fit
+    **earlystopping_kwargs)
+  File "/home/andrii/dev/RecSys2019_DeepLearning_Evaluation/Base/Incremental_Training_Early_Stopping.py", line 192, in _train_with_early_stopping
+    results_run, results_run_string = evaluator_object.evaluateRecommender(self)
+  File "/home/andrii/dev/RecSys2019_DeepLearning_Evaluation/Base/Evaluation/Evaluator.py", line 289, in evaluateRecommender
+    results_dict = self._run_evaluation_on_selected_users(recommender_object, self.users_to_evaluate)
+  File "/home/andrii/dev/RecSys2019_DeepLearning_Evaluation/Base/Evaluation/Evaluator.py", line 560, in _run_evaluation_on_selected_users
+    return_scores=True,
+  File "/home/andrii/dev/RecSys2019_DeepLearning_Evaluation/Base/BaseRecommender.py", line 146, in recommend
+    scores_batch = self._compute_item_score(user_id_array, items_to_compute=items_to_compute)
+  File "/home/andrii/dev/RecSys2019_DeepLearning_Evaluation/Conferences/RecSys/SpectralCF_our_interface/SpectralCF_RecommenderWrapper.py", line 125, in _compute_item_score
+    item_scores_to_compute = self.sess.run(self.model.all_ratings, {self.model.users: user_batch})
+  File "/home/andrii/miniforge3/envs/DLevaluation/lib/python3.6/site-packages/tensorflow/python/client/session.py", line 929, in run
+    run_metadata_ptr)
+  File "/home/andrii/miniforge3/envs/DLevaluation/lib/python3.6/site-packages/tensorflow/python/client/session.py", line 1152, in _run
+    feed_dict_tensor, options, run_metadata)
+  File "/home/andrii/miniforge3/envs/DLevaluation/lib/python3.6/site-packages/tensorflow/python/client/session.py", line 1328, in _do_run
+    run_metadata)
+  File "/home/andrii/miniforge3/envs/DLevaluation/lib/python3.6/site-packages/tensorflow/python/client/session.py", line 1348, in _do_call
+    raise type(e)(node_def, op, message)
+tensorflow.python.framework.errors_impl.ResourceExhaustedError: OOM when allocating tensor of shape [8973,8973] and type float
+	 [[node MatMul_4/a (defined at /home/andrii/dev/RecSys2019_DeepLearning_Evaluation/Conferences/RecSys/SpectralCF_our_interface/SpectralCF.py:80)  = Const[dtype=DT_FLOAT, value=Tensor<type: float shape: [8973,8973] values: [1.16213298 0.000446597143 -0.000197508984...]...>, _device="/job:localhost/replica:0/task:0/device:GPU:0"]()]]
+
+Caused by op 'MatMul_4/a', defined at:
+  File "/home/andrii/miniforge3/envs/DLevaluation/lib/python3.6/runpy.py", line 193, in _run_module_as_main
+    "__main__", mod_spec)
+  File "/home/andrii/miniforge3/envs/DLevaluation/lib/python3.6/runpy.py", line 85, in _run_code
+    exec(code, run_globals)
+  File "/home/andrii/miniforge3/envs/DLevaluation/lib/python3.6/site-packages/ipykernel_launcher.py", line 16, in <module>
+    app.launch_new_instance()
+  File "/home/andrii/miniforge3/envs/DLevaluation/lib/python3.6/site-packages/traitlets/config/application.py", line 664, in launch_instance
+    app.start()
+  File "/home/andrii/miniforge3/envs/DLevaluation/lib/python3.6/site-packages/ipykernel/kernelapp.py", line 619, in start
+    self.io_loop.start()
+  File "/home/andrii/miniforge3/envs/DLevaluation/lib/python3.6/site-packages/tornado/platform/asyncio.py", line 199, in start
+    self.asyncio_loop.run_forever()
+  File "/home/andrii/miniforge3/envs/DLevaluation/lib/python3.6/asyncio/base_events.py", line 442, in run_forever
+    self._run_once()
+  File "/home/andrii/miniforge3/envs/DLevaluation/lib/python3.6/asyncio/base_events.py", line 1462, in _run_once
+    handle._run()
+  File "/home/andrii/miniforge3/envs/DLevaluation/lib/python3.6/asyncio/events.py", line 145, in _run
+    self._callback(*self._args)
+  File "/home/andrii/miniforge3/envs/DLevaluation/lib/python3.6/site-packages/tornado/ioloop.py", line 688, in <lambda>
+    lambda f: self._run_callback(functools.partial(callback, future))
+  File "/home/andrii/miniforge3/envs/DLevaluation/lib/python3.6/site-packages/tornado/ioloop.py", line 741, in _run_callback
+    ret = callback()
+  File "/home/andrii/miniforge3/envs/DLevaluation/lib/python3.6/site-packages/tornado/gen.py", line 814, in inner
+    self.ctx_run(self.run)
+  File "/home/andrii/miniforge3/envs/DLevaluation/lib/python3.6/site-packages/tornado/gen.py", line 162, in _fake_ctx_run
+    return f(*args, **kw)
+  File "/home/andrii/miniforge3/envs/DLevaluation/lib/python3.6/site-packages/tornado/gen.py", line 775, in run
+    yielded = self.gen.send(value)
+  File "/home/andrii/miniforge3/envs/DLevaluation/lib/python3.6/site-packages/ipykernel/kernelbase.py", line 358, in process_one
+    yield gen.maybe_future(dispatch(*args))
+  File "/home/andrii/miniforge3/envs/DLevaluation/lib/python3.6/site-packages/tornado/gen.py", line 234, in wrapper
+    yielded = ctx_run(next, result)
+  File "/home/andrii/miniforge3/envs/DLevaluation/lib/python3.6/site-packages/tornado/gen.py", line 162, in _fake_ctx_run
+    return f(*args, **kw)
+  File "/home/andrii/miniforge3/envs/DLevaluation/lib/python3.6/site-packages/ipykernel/kernelbase.py", line 261, in dispatch_shell
+    yield gen.maybe_future(handler(stream, idents, msg))
+  File "/home/andrii/miniforge3/envs/DLevaluation/lib/python3.6/site-packages/tornado/gen.py", line 234, in wrapper
+    yielded = ctx_run(next, result)
+  File "/home/andrii/miniforge3/envs/DLevaluation/lib/python3.6/site-packages/tornado/gen.py", line 162, in _fake_ctx_run
+    return f(*args, **kw)
+  File "/home/andrii/miniforge3/envs/DLevaluation/lib/python3.6/site-packages/ipykernel/kernelbase.py", line 538, in execute_request
+    user_expressions, allow_stdin,
+  File "/home/andrii/miniforge3/envs/DLevaluation/lib/python3.6/site-packages/tornado/gen.py", line 234, in wrapper
+    yielded = ctx_run(next, result)
+  File "/home/andrii/miniforge3/envs/DLevaluation/lib/python3.6/site-packages/tornado/gen.py", line 162, in _fake_ctx_run
+    return f(*args, **kw)
+  File "/home/andrii/miniforge3/envs/DLevaluation/lib/python3.6/site-packages/ipykernel/ipkernel.py", line 302, in do_execute
+    res = shell.run_cell(code, store_history=store_history, silent=silent)
+  File "/home/andrii/miniforge3/envs/DLevaluation/lib/python3.6/site-packages/ipykernel/zmqshell.py", line 539, in run_cell
+    return super(ZMQInteractiveShell, self).run_cell(*args, **kwargs)
+  File "/home/andrii/miniforge3/envs/DLevaluation/lib/python3.6/site-packages/IPython/core/interactiveshell.py", line 2867, in run_cell
+    raw_cell, store_history, silent, shell_futures)
+  File "/home/andrii/miniforge3/envs/DLevaluation/lib/python3.6/site-packages/IPython/core/interactiveshell.py", line 2895, in _run_cell
+    return runner(coro)
+  File "/home/andrii/miniforge3/envs/DLevaluation/lib/python3.6/site-packages/IPython/core/async_helpers.py", line 68, in _pseudo_sync_runner
+    coro.send(None)
+  File "/home/andrii/miniforge3/envs/DLevaluation/lib/python3.6/site-packages/IPython/core/interactiveshell.py", line 3072, in run_cell_async
+    interactivity=interactivity, compiler=compiler, result=result)
+  File "/home/andrii/miniforge3/envs/DLevaluation/lib/python3.6/site-packages/IPython/core/interactiveshell.py", line 3263, in run_ast_nodes
+    if (await self.run_code(code, result,  async_=asy)):
+  File "/home/andrii/miniforge3/envs/DLevaluation/lib/python3.6/site-packages/IPython/core/interactiveshell.py", line 3343, in run_code
+    exec(code_obj, self.user_global_ns, self.user_ns)
+  File "<ipython-input-2-866d46a425a8>", line 383, in <module>
+    flag_DL_tuned=USE_NN_TUNED,
+  File "<ipython-input-2-866d46a425a8>", line 288, in run_search_or_eval
+    output_file_name_root=SpectralCF_RecommenderWrapper.RECOMMENDER_NAME + '_article_default',
+  File "/home/andrii/dev/RecSys2019_DeepLearning_Evaluation/ParameterTuning/SearchSingleCase.py", line 105, in search
+    self._objective_function(fit_hyperparameters_values)
+  File "/home/andrii/dev/RecSys2019_DeepLearning_Evaluation/ParameterTuning/SearchAbstractClass.py", line 372, in _objective_function
+    result_dict, result_string, recommender_instance, train_time, evaluation_time = self._evaluate_on_validation(current_fit_parameters_dict)
+  File "/home/andrii/dev/RecSys2019_DeepLearning_Evaluation/ParameterTuning/SearchSingleCase.py", line 60, in _evaluate_on_validation
+    return super(SearchSingleCase, self)._evaluate_on_validation(current_fit_parameters)
+  File "/home/andrii/dev/RecSys2019_DeepLearning_Evaluation/ParameterTuning/SearchAbstractClass.py", line 273, in _evaluate_on_validation
+    recommender_instance, train_time = self._fit_model(current_fit_parameters)
+  File "/home/andrii/dev/RecSys2019_DeepLearning_Evaluation/ParameterTuning/SearchAbstractClass.py", line 263, in _fit_model
+    **current_fit_parameters)
+  File "/home/andrii/dev/RecSys2019_DeepLearning_Evaluation/Conferences/RecSys/SpectralCF_our_interface/SpectralCF_RecommenderWrapper.py", line 187, in fit
+    self.model.build_graph()
+  File "/home/andrii/dev/RecSys2019_DeepLearning_Evaluation/Conferences/RecSys/SpectralCF_our_interface/SpectralCF.py", line 80, in build_graph
+    embeddings = tf.matmul(A_hat, embeddings)
+  File "/home/andrii/miniforge3/envs/DLevaluation/lib/python3.6/site-packages/tensorflow/python/ops/math_ops.py", line 2001, in matmul
+    a = ops.convert_to_tensor(a, name="a")
+  File "/home/andrii/miniforge3/envs/DLevaluation/lib/python3.6/site-packages/tensorflow/python/framework/ops.py", line 1050, in convert_to_tensor
+    as_ref=False)
+  File "/home/andrii/miniforge3/envs/DLevaluation/lib/python3.6/site-packages/tensorflow/python/framework/ops.py", line 1146, in internal_convert_to_tensor
+    ret = conversion_func(value, dtype=dtype, name=name, as_ref=as_ref)
+  File "/home/andrii/miniforge3/envs/DLevaluation/lib/python3.6/site-packages/tensorflow/python/framework/constant_op.py", line 229, in _constant_tensor_conversion_function
+    return constant(v, dtype=dtype, name=name)
+  File "/home/andrii/miniforge3/envs/DLevaluation/lib/python3.6/site-packages/tensorflow/python/framework/constant_op.py", line 214, in constant
+    name=name).outputs[0]
+  File "/home/andrii/miniforge3/envs/DLevaluation/lib/python3.6/site-packages/tensorflow/python/util/deprecation.py", line 488, in new_func
+    return func(*args, **kwargs)
+  File "/home/andrii/miniforge3/envs/DLevaluation/lib/python3.6/site-packages/tensorflow/python/framework/ops.py", line 3274, in create_op
+    op_def=op_def)
+  File "/home/andrii/miniforge3/envs/DLevaluation/lib/python3.6/site-packages/tensorflow/python/framework/ops.py", line 1770, in __init__
+    self._traceback = tf_stack.extract_stack()
+
+ResourceExhaustedError (see above for traceback): OOM when allocating tensor of shape [8973,8973] and type float
+	 [[node MatMul_4/a (defined at /home/andrii/dev/RecSys2019_DeepLearning_Evaluation/Conferences/RecSys/SpectralCF_our_interface/SpectralCF.py:80)  = Const[dtype=DT_FLOAT, value=Tensor<type: float shape: [8973,8973] values: [1.16213298 0.000446597143 -0.000197508984...]...>, _device="/job:localhost/replica:0/task:0/device:GPU:0"]()]]
+
+
+SearchSingleCase: Search complete. Best config is None: None

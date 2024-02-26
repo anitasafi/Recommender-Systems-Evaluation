@@ -1,0 +1,4 @@
+	Max pop 	&Min pop 	&Avg pop 	&Gini Index 	&Kendall Tau 	&Shannon 	&Herfindahl \\ 
+Full data	&321.00	&1.00	&12.07	&0.37	&1.00	&13.65	&1.00\\ 
+Training data	&311.00	&0.00	&11.75	&0.37	&0.97	&13.65	&1.00\\ 
+Test data	&11.00	&0.00	&0.33	&0.79	&0.23	&11.96	&1.00\\ 

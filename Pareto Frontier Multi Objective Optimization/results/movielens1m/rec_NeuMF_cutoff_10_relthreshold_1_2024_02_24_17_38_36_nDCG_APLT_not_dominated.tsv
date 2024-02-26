@@ -1,0 +1,4 @@
+model	nDCG	APLT
+NeuMF_seed=42_e=30_bs=128_lr=0$001_mffactors=32_drop=0_mftrain=True_mlptrain=True_m=6	0.0724462435761072	0.0500496688741721
+NeuMF_seed=42_e=30_bs=256_lr=0$001_mffactors=32_drop=0_mftrain=True_mlptrain=True_m=6	0.0733545229465557	0.03591059602649
+NeuMF_seed=42_e=30_bs=64_lr=0$001_mffactors=32_drop=0_mftrain=True_mlptrain=True_m=4	0.0743594680585228	0.0233940397350993

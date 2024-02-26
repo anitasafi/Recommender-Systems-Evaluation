@@ -1,0 +1,50 @@
+experiment:
+  version: 0.3.1
+  print_results_as_triplets: True
+  
+  dataset: cat_dbpedia_movielens_1m
+  data_config:
+    strategy: dataset
+    dataset_path: ../data/movielens_1m/dataset.tsv
+    side_information:
+      - dataloader: ChainedKG
+        map: ../data/cat_dbpedia_movielens_1m/map.tsv
+        features: ../data/cat_dbpedia_movielens_1m/features.tsv
+        properties: ../data/cat_dbpedia_movielens_1m/properties.conf
+#  prefiltering:
+#    strategy: user_average # Not applied in the paper experiments
+  splitting:
+    save_on_disk: True
+    save_folder: ../data/cat_dbpedia_movielens_1m/splitting/
+    test_splitting:
+        strategy: temporal_hold_out
+        test_ratio: 0.2
+    validation_splitting:
+        strategy: temporal_hold_out
+        test_ratio: 0.2
+  top_k: 10
+  evaluation:
+    cutoffs: 10
+    simple_metrics: [nDCG, Recall, Precision, Gini, ItemCoverage, EPC, EFD, APLT, ARP]
+    relevance_threshold: 1
+  gpu: 1
+  external_models_path: ../external/models/__init__.py
+  models:
+    #### 
+    NeuMF: #from the original paper + Rendle
+      meta:
+        hyper_max_evals: 10
+        hyper_opt_alg: tpe
+        verbose: True
+        save_recs: True
+        validation_rate: 1
+      mf_factors:  [32, 128, 256]
+      dropout: 0
+      is_mf_train: True
+      is_mlp_train: True
+      batch_size: [64, 128, 256]
+      epochs: 30
+      m: [4,6,8]
+        
+
+    

@@ -1,0 +1,65 @@
+\begin{tabular}{ll|c}
+\toprule
+Algorithm & Hyperparameter &	 citeulike \\
+\midrule
+\multirow{5}{*}{UserKNN CF cosine} & topK &         578 \\
+                   & shrink &           0 \\
+                   & similarity &      cosine \\
+                   & normalize &        True \\
+                   & feature weighting &        BM25 \\
+\midrule
+\multirow{4}{*}{UserKNN CF dice} & topK &         627 \\
+                   & shrink &           0 \\
+                   & similarity &        dice \\
+                   & normalize &       False \\
+\midrule
+\multirow{4}{*}{UserKNN CF jaccard} & topK &         637 \\
+                   & shrink &           0 \\
+                   & similarity &     jaccard \\
+                   & normalize &       False \\
+\midrule
+\multirow{6}{*}{UserKNN CF asymmetric} & topK &         690 \\
+                   & shrink &        1000 \\
+                   & similarity &  asymmetric \\
+                   & normalize &        True \\
+                   & asymmetric alpha &      1.0291 \\
+                   & feature weighting &        BM25 \\
+\midrule
+\multirow{6}{*}{UserKNN CF tversky} & topK &         533 \\
+                   & shrink &          35 \\
+                   & similarity &     tversky \\
+                   & normalize &        True \\
+                   & tversky alpha &      1.4634 \\
+                   & tversky beta &      0.0885 \\
+\midrule
+\multirow{5}{*}{ItemKNN CF cosine} & topK &         594 \\
+                   & shrink &         999 \\
+                   & similarity &      cosine \\
+                   & normalize &        True \\
+                   & feature weighting &      TF-IDF \\
+\midrule
+\multirow{4}{*}{ItemKNN CF dice} & topK &         996 \\
+                   & shrink &          11 \\
+                   & similarity &        dice \\
+                   & normalize &       False \\
+\midrule
+\multirow{4}{*}{ItemKNN CF jaccard} & topK &         480 \\
+                   & shrink &           3 \\
+                   & similarity &     jaccard \\
+                   & normalize &        True \\
+\midrule
+\multirow{6}{*}{ItemKNN CF asymmetric} & topK &        1000 \\
+                   & shrink &         649 \\
+                   & similarity &  asymmetric \\
+                   & normalize &        True \\
+                   & asymmetric alpha &      0.2742 \\
+                   & feature weighting &      TF-IDF \\
+\midrule
+\multirow{6}{*}{ItemKNN CF tversky} & topK &         421 \\
+                   & shrink &          28 \\
+                   & similarity &     tversky \\
+                   & normalize &        True \\
+                   & tversky alpha &      0.0103 \\
+                   & tversky beta &      0.9612 \\
+\bottomrule
+\end{tabular}

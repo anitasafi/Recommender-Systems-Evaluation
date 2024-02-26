@@ -1,0 +1,2 @@
+model_checkpoint_path: "CMN_RecommenderWrapper_best_model_last_session"
+all_model_checkpoint_paths: "CMN_RecommenderWrapper_best_model_last_session"

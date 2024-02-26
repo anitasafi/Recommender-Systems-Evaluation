@@ -1,0 +1,33 @@
+\begin{tabular}{l|rrr|}
+\toprule
+{} &                  Train Time & \begin{tabular}{@{}c@{}}Recommendation\\Time\end{tabular} & \begin{tabular}{@{}c@{}}Recommendation\\Throughput\end{tabular} \\
+\midrule
+Random                     &                 0.01 [sec]  &                                       12.37 [sec]  &                                                160 \\
+TopPop                     &                 0.00 [sec]  &                                       12.35 [sec]  &                                                160 \\
+\midrule
+UserKNN CF cosine          &                 0.28 [sec]  &                                       12.38 [sec]  &                                                160 \\
+UserKNN CF dice            &                 0.29 [sec]  &                                       13.47 [sec]  &                                                147 \\
+UserKNN CF jaccard         &                 0.21 [sec]  &                                       12.64 [sec]  &                                                156 \\
+UserKNN CF asymmetric      &                 0.19 [sec]  &                                       13.22 [sec]  &                                                150 \\
+UserKNN CF tversky         &                 0.21 [sec]  &                                       12.38 [sec]  &                                                160 \\
+ItemKNN CF cosine          &                 0.76 [sec]  &                                       12.51 [sec]  &                                                158 \\
+ItemKNN CF dice            &                 0.65 [sec]  &                                       12.62 [sec]  &                                                157 \\
+ItemKNN CF jaccard         &                 0.66 [sec]  &                                       12.50 [sec]  &                                                158 \\
+ItemKNN CF asymmetric      &                 0.77 [sec]  &                                       12.50 [sec]  &                                                158 \\
+ItemKNN CF tversky         &                 0.66 [sec]  &                                       12.35 [sec]  &                                                160 \\
+P3alpha                    &                 4.51 [sec]  &                                       12.99 [sec]  &                                                152 \\
+RP3beta                    &                 4.86 [sec]  &                                       12.53 [sec]  &                                                158 \\
+\midrule
+EASE R                     &  180.21 [sec] / 3.00 [min]  &                                       12.62 [sec]  &                                                157 \\
+SLIM BPR                   &                15.13 [sec]  &                                       12.27 [sec]  &                                                161 \\
+SLIM ElasticNet            &  216.16 [sec] / 3.60 [min]  &                                       12.51 [sec]  &                                                158 \\
+MF BPR                     &                21.94 [sec]  &                                       12.80 [sec]  &                                                155 \\
+MF FunkSVD                 &                37.29 [sec]  &                                       12.75 [sec]  &                                                155 \\
+PureSVD                    &                 0.06 [sec]  &                                       12.34 [sec]  &                                                160 \\
+NMF                        &                 1.01 [sec]  &                                       12.45 [sec]  &                                                159 \\
+IALS                       &                14.06 [sec]  &                                       12.49 [sec]  &                                                158 \\
+\midrule
+SpectralCF                 &                           - &                                                  - &                                                  - \\
+SpectralCF article default &                           - &                                                  - &                                                  - \\
+\bottomrule
+\end{tabular}

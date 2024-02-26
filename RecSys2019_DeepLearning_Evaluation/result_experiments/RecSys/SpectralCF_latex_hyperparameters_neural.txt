@@ -1,0 +1,14 @@
+\begin{tabular}{ll|cccc}
+\toprule
+Algorithm & Hyperparameter &	 movielens1m ours &	 movielens1m original &	 hetrec &	 amazon instant video \\
+\midrule
+\multirow{6}{*}{SpectralCF} & batch size &             2048 &                    - &      - &                 1024 \\
+                           & embedding size &                4 &                    - &      - &                    8 \\
+                           & decay &         3.06E-02 &                    - &      - &             2.78E-04 \\
+                           & learning rate &         8.83E-04 &                    - &      - &             9.68E-03 \\
+                           & k &                2 &                    - &      - &                    3 \\
+                           & epochs &              735 &                    - &      - &                  245 \\
+\midrule
+SpectralCF article default & - &                - &                    - &      - &                    - \\
+\bottomrule
+\end{tabular}

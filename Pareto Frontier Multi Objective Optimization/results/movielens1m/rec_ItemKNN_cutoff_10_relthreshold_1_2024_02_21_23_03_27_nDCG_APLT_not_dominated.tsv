@@ -1,0 +1,14 @@
+model	nDCG	APLT
+ItemKNN_nn=8_sim=cosine_imp=standard_bin=False_shrink=0_norm=True_asymalpha=_tvalpha=_tvbeta=_rweights=	0.0744518779650762	0.026341059602649
+ItemKNN_nn=413_sim=cosine_imp=standard_bin=False_shrink=0_norm=True_asymalpha=_tvalpha=_tvbeta=_rweights=	0.0889198588720731	0.0078145695364238
+ItemKNN_nn=400_sim=cosine_imp=standard_bin=False_shrink=0_norm=True_asymalpha=_tvalpha=_tvbeta=_rweights=	0.088460169493164	0.0079801324503311
+ItemKNN_nn=457_sim=cosine_imp=standard_bin=False_shrink=0_norm=True_asymalpha=_tvalpha=_tvbeta=_rweights=	0.0889885746293596	0.0072682119205298
+ItemKNN_nn=447_sim=cosine_imp=standard_bin=False_shrink=0_norm=True_asymalpha=_tvalpha=_tvbeta=_rweights=	0.0889387982854196	0.0073178807947019
+ItemKNN_nn=618_sim=cosine_imp=standard_bin=False_shrink=0_norm=True_asymalpha=_tvalpha=_tvbeta=_rweights=	0.0900613213014688	0.0061092715231788
+ItemKNN_nn=529_sim=cosine_imp=standard_bin=False_shrink=0_norm=True_asymalpha=_tvalpha=_tvbeta=_rweights=	0.0893064520309735	0.0067218543046357
+ItemKNN_nn=735_sim=cosine_imp=standard_bin=False_shrink=0_norm=True_asymalpha=_tvalpha=_tvbeta=_rweights=	0.0905135947926759	0.0054470198675496
+ItemKNN_nn=800_sim=cosine_imp=standard_bin=False_shrink=0_norm=True_asymalpha=_tvalpha=_tvbeta=_rweights=	0.0906618535191448	0.0052980132450331
+ItemKNN_nn=545_sim=cosine_imp=standard_bin=False_shrink=0_norm=True_asymalpha=_tvalpha=_tvbeta=_rweights=	0.0894368072586687	0.0065066225165562
+ItemKNN_nn=585_sim=cosine_imp=standard_bin=False_shrink=0_norm=True_asymalpha=_tvalpha=_tvbeta=_rweights=	0.0896429750351164	0.0062417218543046
+ItemKNN_nn=518_sim=cosine_imp=standard_bin=False_shrink=0_norm=True_asymalpha=_tvalpha=_tvbeta=_rweights=	0.0890116229792614	0.0068377483443708
+ItemKNN_nn=291_sim=cosine_imp=standard_bin=False_shrink=0_norm=True_asymalpha=_tvalpha=_tvbeta=_rweights=	0.0853573145341294	0.0099172185430463

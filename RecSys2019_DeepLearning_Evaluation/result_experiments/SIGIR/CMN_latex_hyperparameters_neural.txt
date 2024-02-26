@@ -1,0 +1,17 @@
+\begin{tabular}{ll|c}
+\toprule
+Algorithm & Hyperparameter &	 citeulike \\
+\midrule
+\multirow{11}{*}{CMN} & epochs gmf &        95 \\
+    & hops &         3 \\
+    & neg samples &         4 \\
+    & reg l2 cmn &  1.00E-01 \\
+    & reg l2 gmf &  1.00E-04 \\
+    & pretrain &      True \\
+    & learning rate &  1.00E-03 \\
+    & verbose &     False \\
+    & epochs &        30 \\
+    & batch size &       128 \\
+    & embed size &        50 \\
+\bottomrule
+\end{tabular}
