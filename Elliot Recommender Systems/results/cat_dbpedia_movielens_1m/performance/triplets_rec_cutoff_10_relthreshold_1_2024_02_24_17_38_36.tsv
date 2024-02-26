@@ -1,0 +1,10 @@
+model	metric	value
+NeuMF_seed=42_e=30_bs=128_lr=0$001_mffactors=32_drop=0_mftrain=True_mlptrain=True_m=6	nDCG	0.07244624357610724
+NeuMF_seed=42_e=30_bs=128_lr=0$001_mffactors=32_drop=0_mftrain=True_mlptrain=True_m=6	Recall	0.048377143905836945
+NeuMF_seed=42_e=30_bs=128_lr=0$001_mffactors=32_drop=0_mftrain=True_mlptrain=True_m=6	Precision	0.08461920529801324
+NeuMF_seed=42_e=30_bs=128_lr=0$001_mffactors=32_drop=0_mftrain=True_mlptrain=True_m=6	Gini	0.12685095854435524
+NeuMF_seed=42_e=30_bs=128_lr=0$001_mffactors=32_drop=0_mftrain=True_mlptrain=True_m=6	ItemCoverage	1585.0
+NeuMF_seed=42_e=30_bs=128_lr=0$001_mffactors=32_drop=0_mftrain=True_mlptrain=True_m=6	EPC	0.07146207655026388
+NeuMF_seed=42_e=30_bs=128_lr=0$001_mffactors=32_drop=0_mftrain=True_mlptrain=True_m=6	EFD	0.8195705177129802
+NeuMF_seed=42_e=30_bs=128_lr=0$001_mffactors=32_drop=0_mftrain=True_mlptrain=True_m=6	APLT	0.050049668874172185
+NeuMF_seed=42_e=30_bs=128_lr=0$001_mffactors=32_drop=0_mftrain=True_mlptrain=True_m=6	ARP	1049.2499006622518

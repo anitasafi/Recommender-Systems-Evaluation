@@ -1,0 +1,22 @@
+[
+    {
+        "default_validation_metric": "nDCG",
+        "default_validation_cutoff": 10,
+        "rel_threshold": 1
+    },
+    {
+        "meta": {
+            "hyper_max_evals": 20,
+            "hyper_opt_alg": "tpe",
+            "save_recs": true,
+            "verbose": true
+        },
+        "recommender": "UserKNN_nn=879_sim=cosine_imp=standard_bin=False_shrink=0_norm=True_asymalpha=_tvalpha=_tvbeta=_rweights=",
+        "configuration": {
+            "neighbors": 879.740207762055,
+            "similarity": "cosine",
+            "profile": "tfidf",
+            "name": "UserKNN_nn=879_sim=cosine_imp=standard_bin=False_shrink=0_norm=True_asymalpha=_tvalpha=_tvbeta=_rweights="
+        }
+    }
+]

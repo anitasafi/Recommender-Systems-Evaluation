@@ -1,0 +1,28 @@
+[
+    {
+        "default_validation_metric": "nDCG",
+        "default_validation_cutoff": 10,
+        "rel_threshold": 1
+    },
+    {
+        "meta": {
+            "hyper_max_evals": 10,
+            "hyper_opt_alg": "tpe",
+            "verbose": true,
+            "save_recs": true,
+            "validation_rate": 1
+        },
+        "recommender": "NeuMF_seed=42_e=30_bs=128_lr=0$001_mffactors=32_drop=0_mftrain=True_mlptrain=True_m=6",
+        "configuration": {
+            "mf_factors": 32,
+            "dropout": 0,
+            "is_mf_train": true,
+            "is_mlp_train": true,
+            "batch_size": 128,
+            "epochs": 30,
+            "m": 6,
+            "name": "NeuMF_seed=42_e=30_bs=128_lr=0$001_mffactors=32_drop=0_mftrain=True_mlptrain=True_m=6",
+            "best_iteration": 11
+        }
+    }
+]

@@ -1,0 +1,27 @@
+[
+    {
+        "default_validation_metric": "nDCG",
+        "default_validation_cutoff": 10,
+        "rel_threshold": 1
+    },
+    {
+        "meta": {
+            "hyper_max_evals": 10,
+            "hyper_opt_alg": "tpe",
+            "verbose": true,
+            "save_recs": true,
+            "validation_rate": 20
+        },
+        "recommender": "iALS_seed=42_e=125_bs=-1_factors=127_alpha=34$79960880376472_epsilon=0$8832128533071132_reg=0$023352574146813763_scaling=log",
+        "configuration": {
+            "epochs": 125.95120757153933,
+            "scaling": "log",
+            "factors": 127.82995915220094,
+            "alpha": 34.79960880376472,
+            "epsilon": 0.8832128533071132,
+            "reg": 0.023352574146813763,
+            "name": "iALS_seed=42_e=125_bs=-1_factors=127_alpha=34$79960880376472_epsilon=0$8832128533071132_reg=0$023352574146813763_scaling=log",
+            "best_iteration": 20
+        }
+    }
+]
